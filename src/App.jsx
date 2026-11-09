@@ -4,9 +4,9 @@ import AccordionItem from "./components/Accordion/AccordionItem";
 function App() {
   return <main>
     <section>
-       <h2>Why work with us?</h2>;
+       <h2>Why work with us?</h2>
        <Accordion className='accordion'>
-        <AccordionItem className='accordion-item' title='We got 20 years of experience'>
+        <AccordionItem id='experience' className='accordion-item' title='We got 20 years of experience'>
           <article>
             <p>
               You can't go wrong with us.
@@ -17,7 +17,7 @@ function App() {
           </article>
 
         </AccordionItem>
-        <AccordionItem className='accordion-item' title='We are working local guides'>
+        <AccordionItem id='local-guide' className='accordion-item' title='We are working local guides'>
           <article>
             <p>
               Lorem ipsum dolor sit amet consectetur,
