@@ -1,22 +1,14 @@
-import { UseAccordionContext } from "./Accordion"
+import Accordion, { UseAccordionContext } from "./Accordion"
 
 export default function AccordionItem({id, title, children, className}) {
-   const {openItemId, openItem, closeItem} = UseAccordionContext();
+   const {openItemId, toggleItem} = UseAccordionContext();
 
    const isOpen = openItemId === id;
-   function handleClick() {
-    if(isOpen) {
-        closeItem()
-    }
-    else {
-        openItem(id)
-    }
-   }
-
+ 
 
     return (
         <li className={className}>
-            <h3 onClick={handleClick}>
+            <h3 onClick={() => toggleItem(id)}>
                 {title}
             </h3>
             <div className={isOpen ? 'accordion-item-content open' : 'accordion-item-content'}>
